@@ -1,0 +1,44 @@
+﻿@inject NavigationManager Navigation
+@layout LayoutLogin
+@page "/"
+@page "/login"
+	<MatThemeProvider Theme="@temaPrincipal">
+		@*<section class="vh-100" style="background-color:#508bfc;">*@
+		<section class="vh-100 login-imagen">
+			<div class="container py-5 h-100" style="opacity:.9;">
+				<div class="row d-flex justify-content-center align-items-center h-100">
+					<div class="col-12 col-md-8 col-xl-5">
+						<div class="card shadow-2-strong" style="border-radius:1rem;">
+							<div class="card-body p-5 text-center">
+								<h3 class="mb-5">Sign in</h3>
+
+								<div class="form-ouline mb-4">
+									<MatTextField @bind-Value=@usuario Icon="person" Label="Usuario" Outlined="true" Required="true" />
+								</div>
+
+								<div class="form-outline mb-4">
+									<MatTextField @bind-Value=@password Icon="remove_red_eye" Label="Contraseña" Outlined="true" Type="password" Required=true />
+								</div>
+								<div class="form-outline mb-4">
+									<MatButton @onclick="Ingreso" Raised=true Icon="input">Ingresar</MatButton>
+								</div>
+								<div class="form-outline mb-4">
+									<MatButton @onclick="RecuperarPass" Raised="true" Icon="lock_open">Recuperar Contraseña</MatButton>
+									@*<RadzenButton Text="ENVIO" Click="IngresoDos"></RadzenButton>*@
+								</div>
+
+								<hr class="my-4">
+								<div class="mb-1">
+									<SelectorCultura></SelectorCultura>
+								</div>
+								<div class="form-outline mb-5" style="text-align:center;">
+									<RadzenLabel Text="Versión: 1.0.0" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+	</MatThemeProvider>

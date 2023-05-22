@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Eko.InvoiceSearch.Client.props" />
+</Project>

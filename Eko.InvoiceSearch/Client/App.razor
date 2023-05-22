@@ -1,0 +1,21 @@
+﻿@using Eko.InvoiceSearch.Client.Pages.Login
+
+<MatPortalHost></MatPortalHost>
+<CascadingAuthenticationState>
+	<Router AppAssembly="@typeof(App).Assembly">
+		<Found Context="routeData">
+			<AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+				<Authorizing>
+					<p>Autorizano</p>
+				</Authorizing>
+				@*<NotAuthorized>
+					<Login></Login>
+				</NotAuthorized>*@
+			</AuthorizeRouteView>
+			<FocusOnNavigate RouteData="@routeData" Selector="h1"></FocusOnNavigate>
+		</Found>
+		<NotFound>
+			<ComponenteNoEncontrado/>
+		</NotFound>
+	</Router>
+</CascadingAuthenticationState>

@@ -1,0 +1,36 @@
+﻿@inject IJSRuntime js
+@inject NavigationManager navigationManager
+@using System.Globalization
+
+	<MatSelectValue Value="CurrentCulture"
+					Items="@culturas"
+					ValueSelector=@(i => i.valor)
+					ValueChanged="(string i) => OnCultureChanged(i)"
+					Icon="language">
+		<ItemTemplate Context="culturas">
+			<span>@culturas.descripcion</span>
+		</ItemTemplate>
+	</MatSelectValue>
+@code {
+	public string CurrentCulture { get; set; } = null!;
+	public string valorTest { get; set; } = null!;
+
+	List<Idioma> culturas = new List<Idioma>
+	{
+		new Idioma { valor = "en-US", descripcion = "English" },
+		new Idioma { valor = "es-MX", descripcion = "Español" },
+		new Idioma { valor = "fr-FR", descripcion = "Frances" }
+	};
+
+	protected override async Task OnInitializedAsync()
+	{
+		CurrentCulture = await js.InvokeAsync<string>("cultura.get");
+	}
+
+	public void OnCultureChanged(string culture)
+	{
+		var jsInProcessRuntime = (IJSInProcessRuntime)js;
+		jsInProcessRuntime.InvokeVoid("cultura.set", culture);
+		navigationManager.NavigateTo(navigationManager.Uri, forceLoad: true);
+	}	
+}

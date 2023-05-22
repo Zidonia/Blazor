@@ -1,0 +1,49 @@
+﻿@using System.Globalization;
+@inherits LayoutComponentBase
+@inject RenovadorToken renovadorToken
+@inject NavigationManager navigationManager
+@inject IJSRuntime js
+<RadzenDialog></RadzenDialog>
+<RadzenNotification></RadzenNotification>
+<RadzenContextMenu></RadzenContextMenu>
+<RadzenTooltip></RadzenTooltip>
+<div class="page">
+	<div class="sidebar">
+		<NavMenu />
+	</div>
+
+	<main>
+		<div class="top-row px-4">
+			<EnlasesLogin></EnlasesLogin>
+			<SelectorCultura></SelectorCultura>
+		</div>
+
+		<article class="content px-4">
+			@Body
+		</article>
+	</main>
+</div>
+
+@code {
+	[CascadingParameter]
+	public Task<AuthenticationState> AuthenticationStateTask { get; set; } = null!;
+
+	//Separación entre el idioma y la representación de ciertos tipos de datos como fechas y números
+	//protected override void OnInitialized()
+	protected async override Task OnInitializedAsync()
+	{
+		//con el this se le pasa una instancia del layout
+		await js.InvokeVoidAsync("timerInactivo", DotNetObjectReference.Create(this));
+		renovadorToken.Iniciar();
+		CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("es-MX");
+	}
+	[JSInvokable]
+	public async Task Logout()
+	{
+		var authState = await AuthenticationStateTask;
+		if (authState.User.Identity!.IsAuthenticated)
+		{
+			navigationManager.NavigateTo("/");
+		}
+	}
+}

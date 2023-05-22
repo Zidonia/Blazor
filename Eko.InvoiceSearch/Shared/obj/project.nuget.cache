@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "DAE4XlIMxP94jCJ3ft1yDY6VogYnbqGPst7PS/gEyJvCu90ebMTLK4fshu14olT0uRcbtyJWBcIlmcYDHmadqg==",
+  "success": true,
+  "projectFilePath": "D:\\GIT\\PortalCyDDesarrollo\\Eko.InvoiceSearch\\Shared\\Eko.InvoiceSearch.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jonathan.flores\\.nuget\\packages\\system.text.encoding.codepages\\7.0.0\\system.text.encoding.codepages.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

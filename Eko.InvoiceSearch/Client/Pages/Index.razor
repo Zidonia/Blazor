@@ -1,0 +1,31 @@
+﻿@inject IRepositorios repositorio
+@page "/index"
+
+@*Por medio de este componente puedo indicar que es lo que quiero que vea el usuario si esta autorizado o no*@
+<AuthorizeView Roles="admins">
+	@*Si esta autorizado que vea lo siguiente*@
+	@*Con la propiedad roles o indico que puede o no puede ver un usuario por el tipo de rol*@
+	<Authorized>
+		<text>Estas autorizado, @context.User.Identity?.Name</text>
+	</Authorized>
+	@*si no esta autorizado*@
+	<NotAuthorized>
+		<text>No estas autorizado @context.User.Identity?.Name</text>
+	</NotAuthorized>
+</AuthorizeView>
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<h4>Fecha Ejemplo: @DateTime.Today</h4>
+<h4>Monto Ejemplo: @precio.ToString("C")</h4>
+
+<buttom class="btn btn-info">Agregar</buttom>
+
+@*<SurveyPrompt Title="How is Blazor working for you?" />*@
+@code{
+	decimal precio = 123456.78m;
+}

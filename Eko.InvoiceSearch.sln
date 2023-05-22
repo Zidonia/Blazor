@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eko.InvoiceSearch.Server", "Eko.InvoiceSearch\Server\Eko.InvoiceSearch.Server.csproj", "{B79048A2-E0B1-4203-9C5B-458373EA0E90}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eko.InvoiceSearch.Client", "Eko.InvoiceSearch\Client\Eko.InvoiceSearch.Client.csproj", "{7838842B-92AB-49C4-BD55-841FD6548A5A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eko.InvoiceSearch.Shared", "Eko.InvoiceSearch\Shared\Eko.InvoiceSearch.Shared.csproj", "{05AEE25C-06B8-4491-8846-E62858E6C044}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B79048A2-E0B1-4203-9C5B-458373EA0E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B79048A2-E0B1-4203-9C5B-458373EA0E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B79048A2-E0B1-4203-9C5B-458373EA0E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B79048A2-E0B1-4203-9C5B-458373EA0E90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7838842B-92AB-49C4-BD55-841FD6548A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7838842B-92AB-49C4-BD55-841FD6548A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7838842B-92AB-49C4-BD55-841FD6548A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7838842B-92AB-49C4-BD55-841FD6548A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05AEE25C-06B8-4491-8846-E62858E6C044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05AEE25C-06B8-4491-8846-E62858E6C044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05AEE25C-06B8-4491-8846-E62858E6C044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05AEE25C-06B8-4491-8846-E62858E6C044}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F666D1E-1285-4D37-A10D-3B772823C438}
+	EndGlobalSection
+EndGlobal

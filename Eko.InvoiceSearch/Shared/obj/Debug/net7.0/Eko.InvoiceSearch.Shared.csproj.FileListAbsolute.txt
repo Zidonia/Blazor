@@ -1,0 +1,12 @@
+D:\GIT\PortalCyDDesarrollo\Eko.InvoiceSearch\Shared\bin\Debug\net7.0\Eko.InvoiceSearch.Shared.deps.json
+D:\GIT\PortalCyDDesarrollo\Eko.InvoiceSearch\Shared\bin\Debug\net7.0\Eko.InvoiceSearch.Shared.dll
+D:\GIT\PortalCyDDesarrollo\Eko.InvoiceSearch\Shared\bin\Debug\net7.0\Eko.InvoiceSearch.Shared.pdb
+D:\GIT\PortalCyDDesarrollo\Eko.InvoiceSearch\Shared\obj\Debug\net7.0\Eko.InvoiceSearch.Shared.csproj.AssemblyReference.cache
+D:\GIT\PortalCyDDesarrollo\Eko.InvoiceSearch\Shared\obj\Debug\net7.0\Eko.InvoiceSearch.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\GIT\PortalCyDDesarrollo\Eko.InvoiceSearch\Shared\obj\Debug\net7.0\Eko.InvoiceSearch.Shared.AssemblyInfoInputs.cache
+D:\GIT\PortalCyDDesarrollo\Eko.InvoiceSearch\Shared\obj\Debug\net7.0\Eko.InvoiceSearch.Shared.AssemblyInfo.cs
+D:\GIT\PortalCyDDesarrollo\Eko.InvoiceSearch\Shared\obj\Debug\net7.0\Eko.InvoiceSearch.Shared.csproj.CoreCompileInputs.cache
+D:\GIT\PortalCyDDesarrollo\Eko.InvoiceSearch\Shared\obj\Debug\net7.0\Eko.InvoiceSearch.Shared.dll
+D:\GIT\PortalCyDDesarrollo\Eko.InvoiceSearch\Shared\obj\Debug\net7.0\refint\Eko.InvoiceSearch.Shared.dll
+D:\GIT\PortalCyDDesarrollo\Eko.InvoiceSearch\Shared\obj\Debug\net7.0\Eko.InvoiceSearch.Shared.pdb
+D:\GIT\PortalCyDDesarrollo\Eko.InvoiceSearch\Shared\obj\Debug\net7.0\ref\Eko.InvoiceSearch.Shared.dll

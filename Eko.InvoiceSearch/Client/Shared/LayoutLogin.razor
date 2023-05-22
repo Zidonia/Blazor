@@ -1,0 +1,37 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager navManager
+@inject RenovadorToken renovadorToken
+@inject NavigationManager navigationManager
+@inject IJSRuntime js
+
+<RadzenDialog></RadzenDialog>
+<RadzenNotification></RadzenNotification>
+<RadzenContextMenu></RadzenContextMenu>
+<RadzenTooltip></RadzenTooltip>
+<div class="col-12">
+	@Body
+</div>
+
+@code{
+	[CascadingParameter]
+	public Task<AuthenticationState> AuthenticationStateTask { get; set; } = null!;
+
+	//Separación entre el idioma y la representación de ciertos tipos de datos como fechas y números
+	//protected override void OnInitialized()
+	protected async override Task OnInitializedAsync()
+	{
+		//con el this se le pasa una instancia del layout
+		await js.InvokeVoidAsync("timerInactivo", DotNetObjectReference.Create(this));
+		renovadorToken.Iniciar();
+	}
+
+	[JSInvokable]
+	public async Task Logout()
+	{
+		var authState = await AuthenticationStateTask;
+		if (authState.User.Identity!.IsAuthenticated)
+		{
+			navigationManager.NavigateTo("/");
+		}
+	}
+}
